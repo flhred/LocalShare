@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1C64F2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0092FF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0092FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#45B2FF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="32" height="32" fill="#f0f0f0" rx="4" ry="4"/>
+  
+  <!-- Stylized server icon -->
+  <rect x="8" y="8" width="16" height="16" fill="url(#grad1)" rx="2" ry="2"/>
+  
+  <!-- Connection lines -->
+  <path d="M4 16 H8 M24 16 H28" stroke="url(#grad2)" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Fast data transfer arrows -->
+  <path d="M13 20 L16 17 L19 20 M13 15 L16 12 L19 15" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
