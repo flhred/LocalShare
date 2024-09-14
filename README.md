@@ -12,9 +12,9 @@ seamless and user-friendly experience for sharing and managing files across devi
 ```bash
 BASE_DIR=${HOME}/Downloads
 ```
-> ### 针对 Windows 和 macOS 的兼容性：
-> - macOS 和 Linux 可以使用 ${HOME}/Downloads。
-> - Windows 则应该使用类似 C:\Users\<Username>\Downloads 的路径。
+> ### Windows and macOS diffence：
+> - macOS & Linux use "${HOME}/Downloads"
+> - Windows use "C:\Users\<Username>\Downloads"
 
 ### 2. Run
 ```bash
