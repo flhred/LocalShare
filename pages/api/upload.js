@@ -1,6 +1,6 @@
 import { IncomingForm } from 'formidable'
-import fs from 'fs'
 import path from 'path'
+require('dotenv').config();
 
 export const config = {
   api: {
@@ -11,7 +11,7 @@ export const config = {
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     const form = new IncomingForm()
-    form.uploadDir = path.join(process.env.HOME, 'Downloads')
+    form.uploadDir = process.env.BASE_DIR
     form.keepExtensions = true
 
     form.parse(req, (err, fields, files) => {

@@ -1,11 +1,12 @@
 import fs from 'fs'
 import path from 'path'
+require('dotenv').config();
 
 export default function handler(req, res) {
   const { query: { dir = '' } } = req
-  const baseDir = path.join(process.env.HOME, 'Downloads')
+  const baseDir = process.env.BASE_DIR
   const currentDir = path.join(baseDir, dir)
-  console.log(process.env.HOME) 
+
   // Ensure the requested directory is within the base directory
   if (!currentDir.startsWith(baseDir)) {
     return res.status(403).json({ error: 'Access denied' })

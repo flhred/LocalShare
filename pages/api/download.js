@@ -1,9 +1,10 @@
 import fs from 'fs'
 import path from 'path'
+require('dotenv').config();
 
 export default function handler(req, res) {
   const { filePath } = req.query;
-  const baseDir = path.join(process.env.HOME, 'Downloads')
+  const baseDir = process.env.BASE_DIR
   const fullPath = path.join(baseDir, filePath);
 
   // Check if the file exists
