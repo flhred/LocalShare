@@ -66,7 +66,7 @@ export default function Home() {
               <ArrowLeft className="mr-2" size={16} />
               Previous
           </button>
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{currentPath || 'Root'}</h5>
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{currentPath || 'Root Path'}</h5>
         </div>
         <ul className="text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
           {files.map(file => (
