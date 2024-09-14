@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Head from 'next/head' // Import Head component
 import { Folder, File, ArrowLeft } from 'lucide-react'
 
 export default function Home() {
@@ -36,12 +37,18 @@ export default function Home() {
 
   return (
     <div className="container mx-auto max-w-sm p-4">
+      <Head>
+        <title>Local Share</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      
       <div className="flex items-center justify-between m-2">
         <a href="/" className="flex">
           <img src="/logo.svg" className="h-8 mr-3" alt="LocalShare Logo"/>
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Local Share</span>
         </a>
       </div>
+
       <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-2">
         <form onSubmit={handleUpload} className="max-w-sm mx-auto">
           <div className="mb-4">
